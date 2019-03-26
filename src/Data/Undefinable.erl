@@ -1,4 +1,4 @@
--module(data_undefinable).
+-module(data_undefinable@foreign).
 -export([undefined/0, undefinable/0, notUndefined/1]).
 
 undefined() -> undefined.
