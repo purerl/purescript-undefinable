@@ -3,8 +3,9 @@
 
 undefined() -> undefined.
 
-undefinable() -> fun (A, R, _F) when A =:= undefined -> R;
-                     (A, _R, F) -> F(A)
-                 end.
+undefinable() -> 
+  fun (Nothing, _Just, undefined) -> Nothing;
+      (_Nothing, Just, Value) -> Just(Value)
+  end.
 
 notUndefined(X) -> X.
